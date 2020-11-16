@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:weightSum="10">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4">
+        <TextView
+            android:id="@+id/label_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="label_id"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/starlink_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="starlink_id"/>
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="label_name"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/starlink_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="starlink_name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/label_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="lat:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/label_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="long:"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/starlink_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="starlink_latitude"/>
+        <TextView
+            android:id="@+id/starlink_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="starlink_longitude"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,10 +1,12 @@
 package com.example.starlinktracker.adapter
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.starlinktracker.R
 import com.example.starlinktracker.retrofit.Results
 
 class StarlinkAdapter : RecyclerView.Adapter<StarlinkAdapter.StarlinkViewHolder>() {
@@ -24,11 +26,17 @@ class StarlinkAdapter : RecyclerView.Adapter<StarlinkAdapter.StarlinkViewHolder>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StarlinkViewHolder {
-        TODO("Not yet implemented")
+        return StarlinkViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.item_starlink,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: StarlinkViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val starlinkObject = differList.currentList[position]
     }
 
     override fun getItemCount(): Int {
